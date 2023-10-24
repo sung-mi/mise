@@ -2,8 +2,12 @@ import React from 'react'
 
 function Row() {
   return (
-    <div>Row</div>
+    <box>Row</box>
   )
 }
 
 export default Row
+
+const box = () => {
+  
+}
