@@ -1,13 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import Row from './components/Row';
+import styled from 'styled-components';
+import Loca from './components/Loca'
+import Card from './components/Card'
+import Tap from './components/Tap'
 
 function App() {
   return (
-    <div className="App">
-      <Row />
-    </div>
+    <Container>
+      <Loca />
+      <Card />
+      <Tap />
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.main`
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between
+`;
