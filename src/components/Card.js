@@ -30,7 +30,7 @@ export default Card;
 
 const Contents = styled.section`
   .card{
-    margin:1rem;
+    
     font-size:1.3rem;
     padding:1rem;
     display: flex;
