@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 const Header = styled.section`
   height:5rem;
-  background:#007980;
+  
+  background: linear-gradient(to left, #178844, #178844, #3496fe);
   position:relative;
 
   h1{
@@ -25,7 +26,7 @@ const Header = styled.section`
 function Loca() {
   return (
     <Header>
-      <h1>미세먼지 알리미</h1>
+      <h1>▒ 미세먼지 알리미 ▒</h1>
       <select>
         <option>서울</option>
         <option>인천</option>

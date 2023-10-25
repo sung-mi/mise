@@ -14,7 +14,7 @@ function App() {
   return (
     <Container>
       <Loca />
-      <Card />
+      <Card items={miseData.response.body.items}/>
       <Tap />
     </Container>
   );
