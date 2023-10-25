@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Loca from './components/Loca'
 import Card from './components/Card'
 import Tap from './components/Tap'
-import A from './components/A'
 import miseData_ from './api/data.json'
 import { useEffect, useState } from 'react';
 
