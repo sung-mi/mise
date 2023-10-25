@@ -6,7 +6,6 @@ import miseData_ from './api/data.json'
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [value, setValue] = useState("");
   const [miseData, setMiseData] = useState([]);
 
   useEffect(() => {
@@ -20,35 +19,14 @@ function App() {
 // const miseInfo = miseData.response.body.items;
 const miseInfo = miseData_.response.body.items;
 
-  
-
-  const search = (e)=>{      
-    e.preventDefault();
-    console.log(miseInfo);
-  }
-
   return (
     <Container>
-      
-     
       <Loca miseInfo={miseInfo}/>
-      <section>
-        <button type='button' onClick={search} >Search</button>
-        <input 
-        value={value}
-        onChange={e=>setValue(e.target.value)}
-        />
-        
-
-      </section>
-      <Card message={value} miseInfo={miseInfo}/>
-      <Tap message={value} miseInfo={miseInfo}/>
-      
+      <Card miseInfo={miseInfo}/>
+      <Tap miseInfo={miseInfo}/>
     </Container>
   );
 }
-
-
 
 export default App;
 

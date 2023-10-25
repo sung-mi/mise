@@ -61,13 +61,13 @@ const Contents = styled.section`
 
 const ListItem = React.memo(({mise}) => {
   if (mise.pm10Value > 0 && mise.pm10Value <= 30) {
-    //$pm10ValueH1.style.color = "blue";
+  
   } else if (mise.pm10Value > 30 && mise.pm10Value <= 80) {
-   // $pm10ValueH1.style.color = "green";
+   
   } else if (mise.pm10Value > 80 && mise.pm10Value <= 150) {
-    //$pm10ValueH1.style.color = "orange";
+    
   } else {
-    //$pm10ValueH1.style.color = "red";
+   
   }
 
   return(
@@ -97,13 +97,10 @@ const List = React.memo(({miseInfo}) => {
   )
 })
 
-const Card = ({message, miseInfo}) =>{
- 
-
+const Card = ({miseInfo}) =>{
   return (
     <Contents>
       <div className='card'>
-        <h1>{message}</h1>
         <List miseInfo={miseInfo}/>
       </div>
     </Contents>

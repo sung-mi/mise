@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Tap = () =>{
+const Tap = ({miseInfo}) =>{
   return (
     <Footer>
       <button type="button">기본 지역 보기</button>
