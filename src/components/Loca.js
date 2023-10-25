@@ -23,13 +23,16 @@ const Header = styled.section`
     font-size:1.3rem;font-weight:bold
   }
 `;
-function Loca() {
+function Loca({miseInfo}) {
   return (
     <Header>
       <h1>▒ 미세먼지 알리미 ▒</h1>
       <select>
-        <option>서울</option>
-        <option>인천</option>
+      {miseInfo.map( mise => {
+        return(
+          <option>{mise.stationName}</option>
+        )
+      })}
       </select>
     </Header>
   )
