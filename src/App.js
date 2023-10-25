@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Loca from './components/Loca'
 import Card from './components/Card'
 import Tap from './components/Tap'
+import A from './components/A'
 import miseData from './api/data.json'
 import { useEffect, useState } from 'react';
 
@@ -29,7 +30,6 @@ function App() {
       value={value}
       onChange={e=>setValue(e.target.value)}
       />
-
       <Loca />
       <Card message={value} posts={posts}/>
       <Tap message={value} posts={posts}/>

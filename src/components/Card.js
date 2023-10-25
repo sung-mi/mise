@@ -1,40 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = ({message, posts}) =>{
+const Card = ({message, posts, mises}) =>{
   return (
     <Contents>
       <div className='card'>
         <h1>{message}</h1>
         <ul>
-          {posts.map(post => {
-            return ()
+          {posts.map((post) => {
+            return (
+              <li className='card_item'>
+                <div className='card_item_info'>
+                 {post.title}
+                </div>
+                <div className='card_item_btn'>
+                  <button type="button">즐겨찾기 등록</button>
+                  <button type="button">즐겨찾기 해제</button>
+                </div>
+              </li>
+            )
           })}
-           
         </ul>
-        <ul>
-          <li className='card_item'>
-            <div className='card_item_info'>
-              정보입력
-            </div>
-            <div className='card_item_btn'>
-              <button type="button">즐겨찾기 등록</button>
-              <button type="button">즐겨찾기 해제</button>
-            </div>
-
-          </li>
-          <li className='card_item'>
-            <div className='card_item_info'>
-              정보입력
-            </div>
-            <div className='card_item_btn'>
-              <button type="button">즐겨찾기 등록</button>
-              <button type="button">즐겨찾기 해제</button>
-            </div>
-
-          </li>
-        </ul>
-        
       </div>
     </Contents>
   )
@@ -43,8 +29,6 @@ const Card = ({message, posts}) =>{
 export default Card;
 
 const Contents = styled.section`
-  
-
   .card{
     margin:1rem;
     font-size:1.3rem;
@@ -54,15 +38,20 @@ const Contents = styled.section`
     overflow:auto;
     height:calc(100vh - 15rem);
   }
-
+  .card ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
   .card .card_item{
     border-radius:1rem;
     margin-bottom:2rem;
     overflow:hidden;
     background-color:#fff;
     box-shadow: 0 0 10px #c7c7c7;
+    flex: 1 calc(50% - 2rem);
+    margin: 1rem;
+    min-width: 32rem;
   }
-
   .card .card_item_btn{
     width:100%;
     display:flex;
@@ -72,11 +61,12 @@ const Contents = styled.section`
   .card .card_item_btn button{
     flex:1 50%;
     height:3.5rem;
-    background-color:#8a25cd;
-    color:#fff;
+    background-color:#fff;
+    color:#333;
     font-weight:bold;
     font-size:1.2rem;
-    border-left:1px solid rgba(255,255,255,0.4);
+    border-left:1px solid #ddd;
+    border-top:1px solid #ddd;
     cursor:pointer;
   }
   .card .card_item_btn button:first-child{
