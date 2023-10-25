@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mise/static/css/main.7f08078f.css",
+    "main.js": "/mise/static/js/main.ebc33389.js",
+    "static/js/787.a876b06d.chunk.js": "/mise/static/js/787.a876b06d.chunk.js",
+    "index.html": "/mise/index.html",
+    "main.7f08078f.css.map": "/mise/static/css/main.7f08078f.css.map",
+    "main.ebc33389.js.map": "/mise/static/js/main.ebc33389.js.map",
+    "787.a876b06d.chunk.js.map": "/mise/static/js/787.a876b06d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f08078f.css",
+    "static/js/main.ebc33389.js"
+  ]
+}
