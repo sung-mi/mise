@@ -49,7 +49,7 @@ const Contents = styled.section`
     background-color:#fff;
     box-shadow: 0 0 10px #c7c7c7;
     flex: 1 calc(50% - 2rem);
-    margin: 1rem;
+    margin: 1rem;  
     min-width: 32rem;
   }
   .card .card_item_btn{
