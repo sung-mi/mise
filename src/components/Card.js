@@ -1,19 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = () =>{
-
+const Card = ({message, posts}) =>{
   return (
     <Contents>
       <div className='card'>
+        <h1>{message}</h1>
+        <ul>
+          {posts.map(post => {
+            return ()
+          })}
+           
+        </ul>
         <ul>
           <li className='card_item'>
             <div className='card_item_info'>
               정보입력
             </div>
             <div className='card_item_btn'>
-              <button>즐겨찾기 등록</button>
-              <button>즐겨찾기 해제</button>
+              <button type="button">즐겨찾기 등록</button>
+              <button type="button">즐겨찾기 해제</button>
             </div>
 
           </li>
@@ -22,8 +28,8 @@ const Card = () =>{
               정보입력
             </div>
             <div className='card_item_btn'>
-              <button>즐겨찾기 등록</button>
-              <button>즐겨찾기 해제</button>
+              <button type="button">즐겨찾기 등록</button>
+              <button type="button">즐겨찾기 해제</button>
             </div>
 
           </li>
