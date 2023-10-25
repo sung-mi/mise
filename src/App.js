@@ -16,8 +16,8 @@ function App() {
   },[]);
 
   
-// const miseInfo = miseData.response.body.items;
-const miseInfo = miseData_.response.body.items;
+  // const miseInfo = miseData.response.body.items;
+  const miseInfo = miseData_.response.body.items;
 
   return (
     <Container>
