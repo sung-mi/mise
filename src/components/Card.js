@@ -72,7 +72,7 @@ const ListItem = React.memo(({mise}) => {
 
   return(
     <li className='card_item'>
-      <div className='card_item_info'>
+      <div className='card_item_info'> 
         <strong>{mise.sidoName} / {mise.stationName}</strong><br/>
         <span>미세먼지 농도 : {mise.pm10Value}</span>
         <span>측정시간 : {mise.dataTime}</span>
