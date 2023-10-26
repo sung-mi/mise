@@ -1,36 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = ({message, posts, mises}) =>{
-  return (
-    <Contents>
-      <div className='card'>
-        <h1>{message}</h1>
-        <ul>
-          {posts.map((post) => {
-            return (
-              <li className='card_item'>
-                <div className='card_item_info'>
-                 {post.title}
-                </div>
-                <div className='card_item_btn'>
-                  <button type="button">즐겨찾기 등록</button>
-                  <button type="button">즐겨찾기 해제</button>
-                </div>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    </Contents>
-  )
-}
-
-export default Card;
-
 const Contents = styled.section`
   .card{
-    
     font-size:1.3rem;
     padding:1rem;
     display: flex;
@@ -51,13 +23,26 @@ const Contents = styled.section`
     flex: 1 calc(50% - 2rem);
     margin: 1rem;  
     min-width: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card .card_item_info{
+    padding:2rem
+  }
+  .card .card_item_info strong{
+    font-size:1.8rem;
+    font-weight:bold;
+  }
+  .card .card_item_info span{
+    display:block;
+    margin-top:1rem
   }
   .card .card_item_btn{
     width:100%;
     display:flex;
     justify-content: space-between;
   }
-
   .card .card_item_btn button{
     flex:1 50%;
     height:3.5rem;
@@ -72,8 +57,55 @@ const Contents = styled.section`
   .card .card_item_btn button:first-child{
     border-left:0
   }
-
-  .card .card_item_info{
-    padding:2rem
-  }
 `;
+
+const ListItem = React.memo(({mise}) => {
+  if (mise.pm10Value > 0 && mise.pm10Value <= 30) {
+  
+  } else if (mise.pm10Value > 30 && mise.pm10Value <= 80) {
+   
+  } else if (mise.pm10Value > 80 && mise.pm10Value <= 150) {
+    
+  } else {
+   
+  }
+
+  return(
+    <li className='card_item'>
+      <div className='card_item_info'> 
+        <strong>{mise.sidoName} / {mise.stationName}</strong><br/>
+        <span>미세먼지 농도 : {mise.pm10Value}</span>
+        <span>측정시간 : {mise.dataTime}</span>
+      </div>
+      <div className='card_item_btn'>
+        <button type="button">즐겨찾기 등록</button>
+        <button type="button">즐겨찾기 해제</button>
+      </div>
+    </li>
+  )
+})
+
+const List = React.memo(({miseInfo}) => {
+  return(
+    <ul>
+      {miseInfo.map( mise => {
+        return(
+          <ListItem mise={mise} />
+        )
+      })}
+    </ul>
+  )
+})
+
+const Card = ({miseInfo}) =>{
+  return (
+    <Contents>
+      <div className='card'>
+        <List miseInfo={miseInfo}/>
+      </div>
+    </Contents>
+  )
+}
+
+export default Card;
+

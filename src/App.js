@@ -2,42 +2,21 @@ import styled from 'styled-components';
 import Loca from './components/Loca'
 import Card from './components/Card'
 import Tap from './components/Tap'
-import A from './components/A'
-import miseData from './api/data.json'
-import { useEffect, useState } from 'react';
+import miseData_ from './api/data.json'
 
-
-// console.log(miseData);
-// console.log(miseData.response.body.items[0].sidoName)
-// const misedata = JSON.stringify(miseData)
-// console.log(misedata)
 
 function App() {
-  const [value, setValue] = useState("");
-  const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-    .then(response => response.json())
-    .then(posts => setPosts(posts));
-  },[]);
-
-  console.log(posts);
+  const miseInfo = miseData_.response.body.items;
 
   return (
     <Container>
-      <input 
-      value={value}
-      onChange={e=>setValue(e.target.value)}
-      />
-      <Loca />
-      <Card message={value} posts={posts}/>
-      <Tap message={value} posts={posts}/>
+      <Loca miseInfo={miseInfo}/>
+      <Card miseInfo={miseInfo}/>
+      <Tap miseInfo={miseInfo}/>
     </Container>
   );
 }
-
-
 
 export default App;
 

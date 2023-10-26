@@ -19,17 +19,23 @@ const Header = styled.section`
     padding:0 0.5rem;
     border-radius:0.3rem;
     1px solid #04555a;
-    position:absolute;top:1rem;right:1rem;
+    position:absolute;top:1rem;right:2rem;
     font-size:1.3rem;font-weight:bold
   }
 `;
-function Loca() {
+function Loca({miseInfo}) {
+  const sel = (i) => {
+    console.log(i)
+  }
   return (
     <Header>
       <h1>▒ 미세먼지 알리미 ▒</h1>
-      <select>
-        <option>서울</option>
-        <option>인천</option>
+      <select onChange={sel}>
+      {miseInfo.map( mise => {
+        return(
+          <option value="">{mise.stationName}</option>
+        )
+      })}
       </select>
     </Header>
   )
