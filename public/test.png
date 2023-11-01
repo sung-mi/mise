@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>오류페이지 &gt; NH투자증권</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/cm.import.css" />
+	<script type="text/javascript" src="/static/js/jquery-1.11.2.min.js"></script>
+	<style>
+		body{background:#e7eaed;}
+	</style>
+</head>
+<body>
+<div id="wrap" class="sub mobile NH">
+	<p class="skipNavi">
+		<span><a href="#container">본문 바로가기</a></span>
+	</p>
+	<section id="container">
+		<div id="cont_body" class="contents">
+			<article class="error_msg">
+				<div class="error_box">
+					<img src="/static/images/common/img_error.png" alt="" />
+					<h2 class="pointBl">고객님 죄송합니다.</h2>
+					<p class="txt">
+						홈페이지의 화면오류 또는 일시적인 오류로 <br />인해 본서비스 이용이 불가합니다. <br />이용에 불편을 드려 죄송합니다.
+					</p>
+					<p class="txt sm">
+						지속적인 문제 발생시 고객지원센터로 문의바랍니다.
+					</p>
+					<a href="tel:1544-0000" class="rBtn">고객지원센터 1544-0000</a>
+					<div class="btn_area">
+						<a href="/" class="btn_set btnBl"><img src="/static/images/common/error_btn_bg.png" alt="" /><span>메인으로 이동</span></a>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+</div>
+</body>
+</html>
